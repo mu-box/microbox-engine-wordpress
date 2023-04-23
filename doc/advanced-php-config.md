@@ -1,6 +1,6 @@
 # Advanced PHP Configuration Options
 
-This engine exposes configuration options through the [Boxfile](http://docs.nanobox.io/boxfile/), a yaml config file used to provision and configure your app's infrastructure when using Nanobox. Being a generic PHP engine, there are a lot of configuration options to try to allow compatibility with as many PHP apps as possible. This engine makes the following options available.
+This engine exposes configuration options through the [Boxfile](https://docs.microbox.cloud/boxfile/), a yaml config file used to provision and configure your app's infrastructure when using Microbox. Being a generic PHP engine, there are a lot of configuration options to try to allow compatibility with as many PHP apps as possible. This engine makes the following options available.
 
 #### Overview of Boxfile Configuration Options
 ```yaml
@@ -80,7 +80,7 @@ build:
 
   # Built-In PHP Web Server Settings
   builtin_document_root: '/'
-  
+
   # PHP-FPM Settings
   php_fpm_events_mechanism: 'epoll'
   php_fpm_max_children: 20
@@ -153,21 +153,21 @@ build:
 ```
 
 ##### Quick Links
-[Web Server Settings](#web-server-settings)  
-[PHP Settings](#php-settings)  
-[Node.js Runtime Settings](#nodejs-runtime-settings)  
-[Apache Settings](#apache-settings)  
-[Nginx Settings](#nginx-settings)  
-[Built-In PHP Web Server Settings](#built-in-php-web-server-settings)  
-[PHP-FPM Settings](#php-fpm-settings)  
-[PHP GeoIP Settings](#php-geoip-settings)  
-[PHP Memcache Settings](#php-memcache-settings)  
-[PHP Mongo Settings](#php-mongo-settings)  
-[PHP APC Settings](#php-apc-settings)  
-[PHP eAccelerator Settings](#php-eaccelerator-settings)  
-[PHP OPcache Settings](#php-opcache-settings)  
-[PHP XCache Settings](#php-xcache-settings)  
-[PHP New Relic Settings](#php-new-relic-settings)  
+[Web Server Settings](#web-server-settings)
+[PHP Settings](#php-settings)
+[Node.js Runtime Settings](#nodejs-runtime-settings)
+[Apache Settings](#apache-settings)
+[Nginx Settings](#nginx-settings)
+[Built-In PHP Web Server Settings](#built-in-php-web-server-settings)
+[PHP-FPM Settings](#php-fpm-settings)
+[PHP GeoIP Settings](#php-geoip-settings)
+[PHP Memcache Settings](#php-memcache-settings)
+[PHP Mongo Settings](#php-mongo-settings)
+[PHP APC Settings](#php-apc-settings)
+[PHP eAccelerator Settings](#php-eaccelerator-settings)
+[PHP OPcache Settings](#php-opcache-settings)
+[PHP XCache Settings](#php-xcache-settings)
+[PHP New Relic Settings](#php-new-relic-settings)
 
 ### Web Server Settings
 The following setting is used to select which web server to use in your application.
@@ -203,7 +203,7 @@ build:
 ---
 
 ### PHP Settings
-The following settings are typically configured in the php.ini. When using Nanobox, these are configured in the Boxfile.
+The following settings are typically configured in the php.ini. When using Microbox, these are configured in the Boxfile.
 
 - [php_runtime](#php_runtime)
 - [php_extensions](#php_extensions)
@@ -254,7 +254,7 @@ build:
 ---
 
 #### php_extensions
-Specifies what PHP extensions should be included in your app's environment. To see what PHP extensions are available, view the [full list of available PHP extensions](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/php-extensions.md).
+Specifies what PHP extensions should be included in your app's environment. To see what PHP extensions are available, view the [full list of available PHP extensions](https://github.com/mu-box/microbox-engine-php/blob/main/doc/php-extensions.md).
 
 ```yaml
 build:
@@ -268,7 +268,7 @@ build:
 ---
 
 #### php_zend_extensions
-Specifies what Zend extensions should be included in your app's environment. To see what Zend extensions are available, view the [Zend Extensions section of the PHP extensions list](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/php-extensions.md#zend-extensions).
+Specifies what Zend extensions should be included in your app's environment. To see what Zend extensions are available, view the [Zend Extensions section of the PHP extensions list](https://github.com/mu-box/microbox-engine-php/blob/main/doc/php-extensions.md#zend-extensions).
 ```yaml
 build:
   php_zend_extensions:
@@ -477,7 +477,7 @@ build:
 Sets the [`session.save_path` PHP setting](http://www.php.net/manual/en/session.configuration.php#ini.session.save-path).
 ```yaml
 build:
-  php_session_save_path: '/tmp/nanobox/sessions'
+  php_session_save_path: '/tmp/microbox/sessions'
 ```
 
 ---
@@ -524,7 +524,7 @@ Many PHP applications utilize Javascript tools in some way. The most common use 
 ---
 
 #### nodejs_runtime
-Specifies which Node.js runtime and version to use. This engine overlays the Node.js engine. You can view the available Node.js runtimes in the [Node.js engine documentation](https://github.com/nanobox-io/nanobox-engine-nodejs#nodejs_runtime).
+Specifies which Node.js runtime and version to use. This engine overlays the Node.js engine. You can view the available Node.js runtimes in the [Node.js engine documentation](https://github.com/mu-box/microbox-engine-nodejs#nodejs_runtime).
 
 ```yaml
 build:
@@ -599,7 +599,7 @@ build:
 
 #### apache_modules
 
-Specify which Apache modules to enable or disable. View the [full list of available Apache Modules](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/apache-modules.md). By default, all modules are enabled.
+Specify which Apache modules to enable or disable. View the [full list of available Apache Modules](https://github.com/mu-box/microbox-engine-php/blob/main/doc/apache-modules.md). By default, all modules are enabled.
 ```yaml
 build:
   apache_modules
@@ -1302,4 +1302,4 @@ build:
 ---
 
 ## Help & Support
-This is a generic (non-framework-specific) PHP engine provided by [Nanobox](http://nanobox.io). If you need help with this engine, you can reach out to us in the [#nanobox IRC channel](http://webchat.freenode.net/?channels=nanobox). If you are running into an issue with the engine, feel free to [create a new issue on this project](https://github.com/nanobox-io/nanobox-engine-php/issues/new).
+This is a generic (non-framework-specific) PHP engine provided by [Microbox](http://microbox.cloud). If you need help with this engine, you can reach out to us in the [Microbox Discord](https://discord.gg/MCDdHfy). If you are running into an issue with the engine, feel free to [create a new issue on this project](https://github.com/mu-box/microbox-engine-php/issues/new).

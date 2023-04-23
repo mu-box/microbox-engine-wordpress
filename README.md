@@ -1,6 +1,6 @@
 # WordPress
 
-This is a WordPress engine for [Nanobox](http://nanobox.io). This engine is based off of the basic PHP engine, and shares many of the configuration options from it.
+This is a WordPress engine for [Microbox](http://microbox.cloud). This engine is based off of the basic PHP engine, and shares many of the configuration options from it.
 
 ## App Detection
 - To detect a WordPress app, this engine looks for a directory named `wp-content`.
@@ -11,10 +11,10 @@ This is a WordPress engine for [Nanobox](http://nanobox.io). This engine is base
 
 ## Basic Configuration Options
 
-This engine exposes configuration options through the [Boxfile](http://docs.nanobox.io/boxfile/), a yaml config file used to provision and configure your app's infrastructure when using Nanobox. 
+This engine exposes configuration options through the [Boxfile](https://docs.microbox.cloud/boxfile/), a yaml config file used to provision and configure your app's infrastructure when using Microbox.
 
 ##### *Advanced Configuration Options*
-This Readme outlines only the most basic and commonly used settings. For the full list of available configuration options, view the **[Advanced PHP Configuration options](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/advanced-php-config.md)**.
+This Readme outlines only the most basic and commonly used settings. For the full list of available configuration options, view the **[Advanced PHP Configuration options](https://github.com/mu-box/microbox-engine-php/blob/main/doc/advanced-php-config.md)**.
 
 #### Overview of Basic Boxfile Configuration Options
 ```yaml
@@ -47,9 +47,9 @@ build:
 ```
 
 ##### Quick Links
-[Web Server Settings](#web-server-settings)  
-[PHP Settings](#php-settings)  
-[Apache Settings](#apache-settings)  
+[Web Server Settings](#web-server-settings)
+[PHP Settings](#php-settings)
+[Apache Settings](#apache-settings)
 
 ### Web Server Settings
 The following setting is used to select which web server to use in your application.
@@ -73,9 +73,9 @@ build:
 
 *Web server specific settings are available in the following sections of the Advanced PHP Configuration doc:
 
-[Apache Settings](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/advanced-php-config.md#apache-settings)  
-[Nginx Settings](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/advanced-php-config.md#nginx-settings)  
-[Built-In PHP Web Server Settings](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/advanced-php-config.md#built-in-php-web-server-settings)
+[Apache Settings](https://github.com/mu-box/microbox-engine-php/blob/main/doc/advanced-php-config.md#apache-settings)
+[Nginx Settings](https://github.com/mu-box/microbox-engine-php/blob/main/doc/advanced-php-config.md#nginx-settings)
+[Built-In PHP Web Server Settings](https://github.com/mu-box/microbox-engine-php/blob/main/doc/advanced-php-config.md#built-in-php-web-server-settings)
 
 ---
 
@@ -89,7 +89,7 @@ build:
 ---
 
 ### PHP Settings
-The following settings are typically configured in the php.ini. When using Nanobox, these are configured in the Boxfile.
+The following settings are typically configured in the php.ini. When using Microbox, these are configured in the Boxfile.
 
 - [php_runtime](#php_runtime)
 - [php_extensions](#php_extensions)
@@ -122,7 +122,7 @@ build:
 ---
 
 #### php_extensions
-Specifies what PHP extensions should be included in your app's environment. To see what PHP extensions are available, view the [full list of available PHP extensions](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/php-extensions.md).
+Specifies what PHP extensions should be included in your app's environment. To see what PHP extensions are available, view the [full list of available PHP extensions](https://github.com/mu-box/microbox-engine-php/blob/main/doc/php-extensions.md).
 
 ```yaml
 build:
@@ -136,7 +136,7 @@ build:
 ---
 
 #### php_zend_extensions
-Specifies what Zend extensions should be included in your app's environment. To see what Zend extensions are available, view the [Zend Extensions section of the PHP extensions list](https://github.com/nanobox-io/nanobox-engine-php/blob/master/doc/php-extensions.md#zend-extensions).
+Specifies what Zend extensions should be included in your app's environment. To see what Zend extensions are available, view the [Zend Extensions section of the PHP extensions list](https://github.com/mu-box/microbox-engine-php/blob/main/doc/php-extensions.md#zend-extensions).
 ```yaml
 build:
   php_zend_extensions:

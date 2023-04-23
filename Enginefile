@@ -1,6 +1,6 @@
 name: 'wordpress'
 version: '0.2.8'
-summary: 'Nanobox engine for WordPress'
+summary: 'Microbox engine for WordPress'
 language: 'php'
 stability: 'stable'
 license: 'MPL'
